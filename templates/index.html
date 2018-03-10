@@ -3,19 +3,22 @@
 <head lang="en">
     	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/static/style.css">
-    	<title>U ok?</title>
+    	<title>WOT-4-DINZ</title>
 </head>
 
 <body>
-    <h1>FORM AND STRUCTURE</h1>
-    <form action="/name.html" method="POST">
-        <p><input type="text" name="name" size ="40" placeholder="Wot ur name"></p>
-        
-        <input type="submit" id="gobutton" value="GO!">
-    </form>
-        
-        
+    
+    <form action="/mgr" method="get">
+        <div class="littlebutton"><button type="submit" value="Add/Remove Meals">ADD/RMV MEALS</button></div>
+    </form>    
+    
+    <h2>{{ pre }}</h2>
+    <div class="suggestion"><h1>{{ food }}</h1></div>
+    
 
+    <form action="/" method="get">
+        <div class="bigbutton"><button type="submit" value="Try Again">NO.</button></div>
+    </form>
 
 </body>
 </html>

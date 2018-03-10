@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+    	<title>WOT-4-DINZ</title>
+</head>
+
+<body>
+    
+    <form action="/add" method="post">
+        <input type="text" name="mealname" size=70 placeholder="Enter new meal name"><br>
+        <button type="submit" value="addmeal">ADD THAT</button>
+    </form>    
+    <br>
+    <form action="/remove" method="post">
+        <select name="mealtoremove" size=10>
+        {% for meal in menu %}
+            <option value="{{ meal }}">{{ meal }}</option>
+        {% endfor %}
+        </select>
+        <div class="bigbutton"><button type="submit" value="deletemeal">KILL THAT</button></div>
+    </form>
+    
+    <form action="/" method="get">
+        <button type="submit" value="back">&#10094; &#10094; Back </button>
+    </form>
+
+</body>
+</html>
