@@ -19,16 +19,6 @@ _PRE = [
 'Tell you what sounds good...'
 ]
 
-def randitem(list):
-    return random.choice(list)
-
-def refresh_menu():
-    global _MENU
-    menu = meal_db.return_list_of_all_meals()
-    _MENU = menu
-
-refresh_menu()
-
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html', pre=randitem(_PRE), food=randitem(_MENU).upper() + "?")
@@ -51,14 +41,18 @@ def remove():
     refresh_menu()
     return redirect(url_for('manager'))
 
+def randitem(list):
+    return random.choice(list)
+
+def refresh_menu():
+    global _MENU
+    menu = meal_db.return_list_of_all_meals()
+    _MENU = menu
+
+meal_db.create_table()
+refresh_menu()
+
 if __name__ == '__main__':
-
-    # meal_db.create_table()
-
+    meal_db.create_table()
     refresh_menu()
-
-
-    # for meal in menu:
-    #     meal_db.add_meal(meal)
-
     app.run(debug=True)

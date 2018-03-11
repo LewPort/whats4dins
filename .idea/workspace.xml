@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f9628e7-859e-4420-b4bb-73d7e57e08eb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change beforePath="$PROJECT_DIR$/meal_db.py" afterPath="$PROJECT_DIR$/meal_db.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="810">
+              <caret line="54" column="26" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
@@ -26,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meal_db.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="meal_db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meal_db.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -55,14 +54,14 @@
       <list>
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/whats4dinner.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/meal_db.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="459" />
-    <option name="y" value="332" />
+    <option name="x" value="165" />
+    <option name="y" value="244" />
     <option name="width" value="1550" />
     <option name="height" value="1543" />
   </component>
@@ -185,7 +184,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="459" y="332" width="1550" height="1543" extended-state="0" />
+    <frame x="165" y="244" width="1550" height="1543" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27076522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -266,22 +265,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/meals.db" />
     <entry file="file://$PROJECT_DIR$/whats4dinner upd8.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meal_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="26" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
