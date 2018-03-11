@@ -52,7 +52,7 @@ def refresh_menu():
 
 if __name__ == '__main__':
 
-    meal_db.create_table()
+    # meal_db.create_table()
 
     refresh_menu()
 
