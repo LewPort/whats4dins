@@ -20,10 +20,8 @@ _PRE = [
 ]
 
 @app.route('/', methods=['GET'])
-def dinz():
-    return render_template('index.html',
-                           pre=randitem(_PRE),
-                           food=randitem(_MENU).upper() + "?")
+def index():
+    return render_template('index.html', pre=randitem(_PRE), food=randitem(_MENU).upper() + "?")
 
 @app.route('/mgr', methods=['GET'])
 def manager():
