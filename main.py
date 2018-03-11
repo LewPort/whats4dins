@@ -4,20 +4,7 @@ import random
 
 app = Flask(__name__)
 
-_MENU = []
-_PRE = [
-'How aboutttt...',
-'Consider this:',
-'What about...',
-'Let\'s think about...',
-'What about...',
-'I fancy...',
-'OMGGGG!!!!',
-'I\'m in the mood for...',
-'You\'re thinking about...',
-'Let\'s haveeeee...',
-'Tell you what sounds good...'
-]
+
 
 @app.route('/', methods=['GET'])
 def index():
@@ -49,6 +36,20 @@ def refresh_menu():
     menu = meal_db.return_list_of_all_meals()
     _MENU = menu
 
+_MENU = []
+_PRE = [
+'How aboutttt...',
+'Consider this:',
+'What about...',
+'Let\'s think about...',
+'What about...',
+'I fancy...',
+'OMGGGG!!!!',
+'I\'m in the mood for...',
+'You\'re thinking about...',
+'Let\'s haveeeee...',
+'Tell you what sounds good...'
+]
 
 if __name__ == '__main__':
 
