@@ -19,7 +19,7 @@ _PRE = [
 'Tell you what sounds good...'
 ]
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def dinz():
     return render_template('index.html',
                            pre=randitem(_PRE),
