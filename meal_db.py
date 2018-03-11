@@ -1,5 +1,6 @@
 import sqlite3
 import time
+import sys
 
 conn = sqlite3.connect('./static/menu.db', check_same_thread=False)
 c = conn.cursor()
@@ -23,6 +24,7 @@ def return_list_of_all_meals():
     c.execute("SELECT meal FROM menu ORDER BY timestamp DESC")
     meals = c.fetchall()
     mealList = [str(i[0]) for i in meals]
+    sys.stdout('Returning list of food items from DB')
     return mealList
 
 
