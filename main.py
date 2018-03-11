@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
 import meal_db
 import random
-import sys
 
 app = Flask(__name__)
 
