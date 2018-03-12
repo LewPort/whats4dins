@@ -12,7 +12,7 @@ def create_table():
     c.execute("""CREATE TABLE IF NOT EXISTS menu (
                 id SERIAL PRIMARY KEY,
                 meal TEXT,
-                timestamp REAL
+                timestamp NUMERIC
     )""")
 
 def add_meal(food):

@@ -66,8 +66,4 @@ populate_table_if_empty()
 refresh_menu()
 
 if __name__ == '__main__':
-    meal_db.create_table()
-    populate_table_if_empty()
-    refresh_menu()
-
     app.run(debug=True)
