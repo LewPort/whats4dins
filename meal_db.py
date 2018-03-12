@@ -16,11 +16,11 @@ def create_table():
 
 def add_meal(food):
     with conn:
-        c.execute("INSERT INTO menu VALUES (?, ?, ?)", (None, food, time.time()))
+        c.execute("INSERT INTO menu VALUES ($1, $2, $3)", (None, food, time.time()))
 
 def remove_meal(food):
     with conn:
-        c.execute("DELETE FROM menu WHERE meal = ?", (food,))
+        c.execute("DELETE FROM menu WHERE meal = $1", (food,))
 
 def return_list_of_all_meals():
     c.execute("SELECT meal FROM menu ORDER BY timestamp DESC")
