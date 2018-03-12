@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect
 import meal_db
 import random
+import time
 import sys
 
 app = Flask(__name__)
@@ -20,12 +21,13 @@ _PRE = [
 'Tell you what sounds good...'
 ]
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     return render_template('index.html', pre=randitem(_PRE), food=randitem(_MENU).upper() + "?")
 
-@app.route('/mgr', methods=['GET'])
+@app.route('/mgr')
 def manager():
+    refresh_menu()
     return render_template('mgr.html', menu=_MENU)
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -47,6 +49,7 @@ def randitem(list):
 
 def refresh_menu():
     global _MENU
+    time.sleep(0.5)
     _MENU = meal_db.return_list_of_all_meals()
     sys.stdout.write('REFRESH MENU: Main.py _MENU list repopulated from the database.')
 
@@ -64,11 +67,7 @@ refresh_menu()
 
 if __name__ == '__main__':
     meal_db.create_table()
-
-    for i in _MENU:
-        meal_db.add_meal(i)
-
-    # with open('meallist.txt','w') as mealtxt:
-    #     mealtxt.write(str(_MENU))
+    populate_table_if_empty()
+    refresh_menu()
 
     app.run(debug=True)
