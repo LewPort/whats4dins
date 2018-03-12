@@ -53,7 +53,6 @@ def populate_table():
         meal_db.add_meal(i)
 
 meal_db.create_table()
-populate_table()
 refresh_menu()
 
 if __name__ == '__main__':
