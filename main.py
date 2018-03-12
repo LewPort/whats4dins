@@ -4,7 +4,7 @@ import random
 
 app = Flask(__name__)
 
-_MENU = []
+_MENU = ['Falafel Wraps', 'Baked Potato & Beans', 'Banh Mi', 'Pasta Bake', 'Stir Fry', 'Nachos with guacamole!', 'EGGGGGGG SANDWICHHHHH', 'Summer Rolls', 'Soup', 'Roast Dinz', 'Pho', 'Bake a loaf', 'Quesodillas', 'Enchilladas! With quorn mince and baked beans and cheese and jalapenos etc', 'Brownies', "That fried burger 'meat' + grilled chilli sandwich that Mark Weins ate in Turkey", 'Dumplings', 'Fiorentina Pizza', 'Apple Pie', 'Macaroni Cheese', 'Lasagne', 'Avocado on Toast', 'Blowtorched-Cheese Topped Sushi', 'SUUUSHIIIIII!!!', 'Something Vietnamese', 'Egg fried rice', 'Indiannnnn', 'Hummous', 'Pizza', 'Bruschetta', 'Pesto Pasta', 'Hotdogs', 'Burgers', 'Burritos', 'Tacos', 'Makhani Curry', 'Nachos with guacamole!', 'EGGGGGGG SANDWICHHHHH', 'Summer Rolls', 'Soup', 'Roast Dinz', 'Pho', 'Bake a loaf', 'Quesodillas', 'Enchilladas! With quorn mince and baked beans and cheese and jalapenos etc', 'Brownies', "That fried burger 'meat' + grilled chilli sandwich that Mark Weins ate in Turkey", 'Dumplings', 'Fiorentina Pizza', 'Apple Pie', 'Macaroni Cheese', 'Lasagne', 'Avocado on Toast', 'Blowtorched-Cheese Topped Sushi', 'SUUUSHIIIIII!!!', 'Something Vietnamese', 'Egg fried rice', 'Indiannnnn', 'Hummous', 'Pizza', 'Bruschetta', 'Pesto Pasta', 'Hotdogs', 'Burgers', 'Burritos', 'Tacos', 'Makhani Curry']
 _PRE = [
 'How aboutttt...',
 'Consider this:',
@@ -46,13 +46,19 @@ def randitem(list):
 
 def refresh_menu():
     global _MENU
-    menu = meal_db.return_list_of_all_meals()
-    _MENU = menu
+    _MENU = meal_db.return_list_of_all_meals()
 
 meal_db.create_table()
 refresh_menu()
 
 if __name__ == '__main__':
     meal_db.create_table()
-    refresh_menu()
+
+    for i in _MENU:
+        meal_db.add_meal(i)
+
+    # with open('meallist.txt','w') as mealtxt:
+    #     mealtxt.write(str(_MENU))
+
+    '''Next, just iterate through _MENU and db.add() each item'''
     app.run(debug=True)

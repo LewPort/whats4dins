@@ -1,8 +1,10 @@
-import sqlite3
+import psycopg2
 import time
-import sys
+import os
 
-conn = sqlite3.connect('./static/menu.db', check_same_thread=False)
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 c = conn.cursor()
 
 def create_table():
