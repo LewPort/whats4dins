@@ -48,11 +48,15 @@ def refresh_menu():
     global _MENU
     _MENU = meal_db.return_list_of_all_meals()
 
-def populate_table():
-    for i in _MENU:
-        meal_db.add_meal(i)
+def populate_table_if_empty():
+    global _MENU
+    if not meal_db.return_list_of_all_meals():
+        for i in _MENU:
+            meal_db.add_meal(i)
+    _MENU = []
 
 meal_db.create_table()
+populate_table_if_empty()
 refresh_menu()
 
 if __name__ == '__main__':
