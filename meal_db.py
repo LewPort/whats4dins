@@ -1,5 +1,6 @@
 import psycopg2
 import time
+import sys
 import os
 
 DATABASE_URL = os.environ['DATABASE_URL']
@@ -17,10 +18,12 @@ def create_table():
 def add_meal(food):
     with conn:
         c.execute("INSERT INTO menu (meal, timestamp) VALUES (%s, %s)", (food, time.time()))
+    sys.stdout.write('Added %s to DB' % food)
 
 def remove_meal(food):
     with conn:
         c.execute("DELETE FROM menu WHERE meal = %s", (food,))
+    sys.stdout.write('Removed %s from DB' % food)
 
 def return_list_of_all_meals():
     c.execute("SELECT meal FROM menu ORDER BY timestamp DESC")

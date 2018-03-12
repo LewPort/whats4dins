@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect
 import meal_db
 import random
+import sys
 
 app = Flask(__name__)
 
@@ -47,12 +48,14 @@ def randitem(list):
 def refresh_menu():
     global _MENU
     _MENU = meal_db.return_list_of_all_meals()
+    sys.stdout.write('REFRESH MENU: Main.py _MENU list repopulated from the database.')
 
 def populate_table_if_empty():
     global _MENU
     if not meal_db.return_list_of_all_meals():
         for i in _MENU:
             meal_db.add_meal(i)
+    sys.stdout.write('Database was found to be blank, so was populated using the default list of foods.')
     _MENU = []
 
 meal_db.create_table()
