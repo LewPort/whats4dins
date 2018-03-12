@@ -9,18 +9,18 @@ c = conn.cursor()
 
 def create_table():
     c.execute("""CREATE TABLE IF NOT EXISTS menu (
-                id SERIAL UNIQUE,
+                id SERIAL PRIMARY KEY,
                 meal TEXT,
                 timestamp REAL
     )""")
 
 def add_meal(food):
     with conn:
-        c.execute("INSERT INTO menu VALUES ($1, $2, $3)", (None, food, time.time()))
+        c.execute("INSERT INTO menu VALUES (%s, %s, %s)", (None, food, time.time()))
 
 def remove_meal(food):
     with conn:
-        c.execute("DELETE FROM menu WHERE meal = $1", (food,))
+        c.execute("DELETE FROM menu WHERE meal = %s", (food,))
 
 def return_list_of_all_meals():
     c.execute("SELECT meal FROM menu ORDER BY timestamp DESC")
