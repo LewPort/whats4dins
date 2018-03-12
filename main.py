@@ -49,6 +49,8 @@ def refresh_menu():
     _MENU = meal_db.return_list_of_all_meals()
 
 meal_db.create_table()
+for i in _MENU:
+    meal_db.add_meal(i)
 refresh_menu()
 
 if __name__ == '__main__':
