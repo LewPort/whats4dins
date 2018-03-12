@@ -16,7 +16,7 @@ def create_table():
 
 def add_meal(food):
     with conn:
-        c.execute("INSERT INTO menu VALUES (%s, %s)", (food, time.time()))
+        c.execute("INSERT INTO menu (meal, timestamp) VALUES (%s, %s)", (food, time.time()))
 
 def remove_meal(food):
     with conn:
