@@ -9,7 +9,7 @@ c = conn.cursor()
 
 def create_table():
     c.execute("""CREATE TABLE IF NOT EXISTS menu (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER PRIMARY KEY SERIAL,
                 meal TEXT,
                 timestamp REAL
     )""")

@@ -48,9 +48,12 @@ def refresh_menu():
     global _MENU
     _MENU = meal_db.return_list_of_all_meals()
 
+def populate_table():
+    for i in _MENU:
+        meal_db.add_meal(i)
+
 meal_db.create_table()
-for i in _MENU:
-    meal_db.add_meal(i)
+populate_table()
 refresh_menu()
 
 if __name__ == '__main__':
@@ -62,5 +65,4 @@ if __name__ == '__main__':
     # with open('meallist.txt','w') as mealtxt:
     #     mealtxt.write(str(_MENU))
 
-    '''Next, just iterate through _MENU and db.add() each item'''
     app.run(debug=True)

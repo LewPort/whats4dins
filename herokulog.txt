@@ -1,0 +1,101 @@
+2018-03-12T02:37:08.775019+00:00 app[web.1]:     )""")
+2018-03-12T02:37:08.775020+00:00 app[web.1]: psycopg2.ProgrammingError: syntax error at or near "AUTOINCREMENT"
+2018-03-12T02:37:08.775021+00:00 app[web.1]: LINE 2:                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+2018-03-12T02:37:08.775022+00:00 app[web.1]:                                                ^
+2018-03-12T02:37:08.775029+00:00 app[web.1]: 
+2018-03-12T02:37:08.775610+00:00 app[web.1]: [2018-03-12 02:37:08 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-03-12T02:37:08.778110+00:00 app[web.1]: [2018-03-12 02:37:08 +0000] [8] [ERROR] Exception in worker process
+2018-03-12T02:37:08.778113+00:00 app[web.1]: Traceback (most recent call last):
+2018-03-12T02:37:08.778115+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-03-12T02:37:08.778117+00:00 app[web.1]:     worker.init_process()
+2018-03-12T02:37:08.778120+00:00 app[web.1]:     self.load_wsgi()
+2018-03-12T02:37:08.778118+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-03-12T02:37:08.778121+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-03-12T02:37:08.778123+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-03-12T02:37:08.778124+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-03-12T02:37:08.778126+00:00 app[web.1]:     self.callable = self.load()
+2018-03-12T02:37:08.778128+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-03-12T02:37:08.778129+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-03-12T02:37:08.778131+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-03-12T02:37:08.778132+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-03-12T02:37:08.778134+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-03-12T02:37:08.778136+00:00 app[web.1]:     __import__(module)
+2018-03-12T02:37:08.778137+00:00 app[web.1]:   File "/app/main.py", line 51, in <module>
+2018-03-12T02:37:08.778139+00:00 app[web.1]:     meal_db.create_table()
+2018-03-12T02:37:08.778140+00:00 app[web.1]:   File "/app/meal_db.py", line 15, in create_table
+2018-03-12T02:37:08.778142+00:00 app[web.1]:     )""")
+2018-03-12T02:37:08.778144+00:00 app[web.1]: psycopg2.ProgrammingError: syntax error at or near "AUTOINCREMENT"
+2018-03-12T02:37:08.778145+00:00 app[web.1]: LINE 2:                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+2018-03-12T02:37:08.778147+00:00 app[web.1]:                                                ^
+2018-03-12T02:37:08.778153+00:00 app[web.1]: 
+2018-03-12T02:37:08.778527+00:00 app[web.1]: [2018-03-12 02:37:08 +0000] [8] [INFO] Worker exiting (pid: 8)
+2018-03-12T02:37:08.926174+00:00 app[web.1]: [2018-03-12 02:37:08 +0000] [4] [INFO] Shutting down: Master
+2018-03-12T02:37:08.926286+00:00 app[web.1]: [2018-03-12 02:37:08 +0000] [4] [INFO] Reason: Worker failed to boot.
+2018-03-12T02:37:09.019720+00:00 heroku[web.1]: Process exited with status 3
+2018-03-12T02:37:09.738848+00:00 heroku[web.1]: State changed from starting to crashed
+2018-03-12T02:44:42.000000+00:00 app[api]: Build started by user porter.lewis@gmail.com
+2018-03-12T02:44:58.574246+00:00 heroku[web.1]: State changed from crashed to starting
+2018-03-12T02:44:42.000000+00:00 app[api]: Build succeeded
+2018-03-12T02:44:58.195396+00:00 app[api]: Deploy 344b177a by user porter.lewis@gmail.com
+2018-03-12T02:44:58.195396+00:00 app[api]: Release v21 created by user porter.lewis@gmail.com
+2018-03-12T02:45:03.099494+00:00 heroku[web.1]: Starting process with command `gunicorn main:app`
+2018-03-12T02:45:04.937000+00:00 app[web.1]: [2018-03-12 02:45:04 +0000] [4] [INFO] Starting gunicorn 19.7.1
+2018-03-12T02:45:04.937705+00:00 app[web.1]: [2018-03-12 02:45:04 +0000] [4] [INFO] Listening at: http://0.0.0.0:58502 (4)
+2018-03-12T02:45:04.937807+00:00 app[web.1]: [2018-03-12 02:45:04 +0000] [4] [INFO] Using worker: sync
+2018-03-12T02:45:04.942789+00:00 app[web.1]: [2018-03-12 02:45:04 +0000] [8] [INFO] Booting worker with pid: 8
+2018-03-12T02:45:04.952082+00:00 app[web.1]: [2018-03-12 02:45:04 +0000] [9] [INFO] Booting worker with pid: 9
+2018-03-12T02:45:05.322381+00:00 heroku[web.1]: State changed from starting to up
+2018-03-12T02:45:05.546835+00:00 app[web.1]: [2018-03-12 02:45:05 +0000] [9] [ERROR] Exception in worker process
+2018-03-12T02:45:05.546884+00:00 app[web.1]: Traceback (most recent call last):
+2018-03-12T02:45:05.546887+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-03-12T02:45:05.546889+00:00 app[web.1]:     worker.init_process()
+2018-03-12T02:45:05.546891+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-03-12T02:45:05.546893+00:00 app[web.1]:     self.load_wsgi()
+2018-03-12T02:45:05.546894+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-03-12T02:45:05.546896+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-03-12T02:45:05.546898+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-03-12T02:45:05.546902+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-03-12T02:45:05.546900+00:00 app[web.1]:     self.callable = self.load()
+2018-03-12T02:45:05.546904+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-03-12T02:45:05.546905+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-03-12T02:45:05.546907+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-03-12T02:45:05.546909+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-03-12T02:45:05.546910+00:00 app[web.1]:     __import__(module)
+2018-03-12T02:45:05.546912+00:00 app[web.1]:   File "/app/main.py", line 51, in <module>
+2018-03-12T02:45:05.546916+00:00 app[web.1]:   File "/app/meal_db.py", line 15, in create_table
+2018-03-12T02:45:05.546914+00:00 app[web.1]:     meal_db.create_table()
+2018-03-12T02:45:05.546918+00:00 app[web.1]:     )""")
+2018-03-12T02:45:05.546920+00:00 app[web.1]: psycopg2.ProgrammingError: syntax error at or near "AUTOINCREMENT"
+2018-03-12T02:45:05.546921+00:00 app[web.1]: LINE 2:                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+2018-03-12T02:45:05.546968+00:00 app[web.1]: 
+2018-03-12T02:45:05.550442+00:00 app[web.1]: [2018-03-12 02:45:05 +0000] [8] [ERROR] Exception in worker process
+2018-03-12T02:45:05.546923+00:00 app[web.1]:                                                ^
+2018-03-12T02:45:05.547661+00:00 app[web.1]: [2018-03-12 02:45:05 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-03-12T02:45:05.550446+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-03-12T02:45:05.550445+00:00 app[web.1]: Traceback (most recent call last):
+2018-03-12T02:45:05.550448+00:00 app[web.1]:     worker.init_process()
+2018-03-12T02:45:05.550450+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-03-12T02:45:05.550453+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-03-12T02:45:05.550451+00:00 app[web.1]:     self.load_wsgi()
+2018-03-12T02:45:05.550456+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-03-12T02:45:05.550454+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-03-12T02:45:05.550458+00:00 app[web.1]:     self.callable = self.load()
+2018-03-12T02:45:05.550459+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-03-12T02:45:05.550461+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-03-12T02:45:05.550462+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-03-12T02:45:05.550466+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-03-12T02:45:05.550464+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-03-12T02:45:05.550467+00:00 app[web.1]:     __import__(module)
+2018-03-12T02:45:05.550469+00:00 app[web.1]:   File "/app/main.py", line 51, in <module>
+2018-03-12T02:45:05.550470+00:00 app[web.1]:     meal_db.create_table()
+2018-03-12T02:45:05.550472+00:00 app[web.1]:   File "/app/meal_db.py", line 15, in create_table
+2018-03-12T02:45:05.550474+00:00 app[web.1]:     )""")
+2018-03-12T02:45:05.550476+00:00 app[web.1]: psycopg2.ProgrammingError: syntax error at or near "AUTOINCREMENT"
+2018-03-12T02:45:05.550477+00:00 app[web.1]: LINE 2:                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+2018-03-12T02:45:05.550479+00:00 app[web.1]:                                                ^
+2018-03-12T02:45:05.550561+00:00 app[web.1]: 
+2018-03-12T02:45:05.553654+00:00 app[web.1]: [2018-03-12 02:45:05 +0000] [8] [INFO] Worker exiting (pid: 8)
+2018-03-12T02:45:05.720730+00:00 app[web.1]: [2018-03-12 02:45:05 +0000] [4] [INFO] Shutting down: Master
+2018-03-12T02:45:05.720877+00:00 app[web.1]: [2018-03-12 02:45:05 +0000] [4] [INFO] Reason: Worker failed to boot.
+2018-03-12T02:45:05.867817+00:00 heroku[web.1]: Process exited with status 3
+2018-03-12T02:45:06.023192+00:00 heroku[web.1]: State changed from up to crashed
