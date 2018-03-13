@@ -30,18 +30,19 @@ def manager():
     refresh_menu()
     return render_template('mgr.html', menu=_MENU)
 
-@app.route('/add', methods=['GET', 'POST'])
+@app.route('/add', methods=['POST'])
 def add():
-    meal = request.form['mealname']
+    meal = request.form.get('mealname', None)
     meal_db.add_meal(meal)
     refresh_menu()
     return redirect(url_for('manager'))
 
-@app.route('/remove', methods=['GET', 'POST'])
+@app.route('/remove', methods=['POST'])
 def remove():
-    meal = request.form['mealtoremove']
-    meal_db.remove_meal(meal)
-    refresh_menu()
+    meal = request.form.get('mealtoremove', None)
+    if meal:
+        meal_db.remove_meal(meal)
+        refresh_menu()
     return redirect(url_for('manager'))
 
 def randitem(list):
